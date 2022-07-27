@@ -2,6 +2,7 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "declaration": true,
+        "moduleResolution": "Node",
         "lib": ["ES5", "ES2015", "ES2016", "ESNext"],
         "jsx": "react-native",
         "target": "ES6",
