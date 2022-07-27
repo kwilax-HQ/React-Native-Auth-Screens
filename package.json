@@ -1,0 +1,37 @@
+{
+  "name": "react-native-auth-screens",
+  "version": "0.1.0",
+  "description": "A boiler Plate Component for React Native Authentication Screen UI",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --output dist/cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwilax-core/React-Native-Auth-Screens.git"
+  },
+  "keywords": [
+    "React-Native",
+    "Auth",
+    "Authentication",
+    "Screen",
+    "UI"
+  ],
+  "author": "sh3riff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwilax-core/React-Native-Auth-Screens/issues"
+  },
+  "homepage": "https://github.com/kwilax-core/React-Native-Auth-Screens#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
+}

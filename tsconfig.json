@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "lib": ["ES5", "ES2015", "ES2016", "ESNext"],
+        "jsx": "react-native",
+        "types": ["node"],
+        "target": "ES2015",
+        "module": "ES2015",
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist/esm",
+        "sourceMap": true,                                        
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"]
+
+  }
