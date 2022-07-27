@@ -4,11 +4,13 @@
   "description": "A boiler Plate Component for React Native Authentication Screen UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --output dist/cjs"
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
   },
   "repository": {
     "type": "git",
