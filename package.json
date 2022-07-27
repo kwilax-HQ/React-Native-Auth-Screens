@@ -1,6 +1,6 @@
 {
-  "name": "react-native-auth-screens",
-  "version": "0.1.0",
+  "name": "@kwilax/react-native-auth-screens",
+  "version": "1.0.0",
   "description": "A boiler Plate Component for React Native Authentication Screen UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
