@@ -34,6 +34,8 @@
     "react-native": "*"
   },
   "devDependencies": {
+    "react": "18.0.0",
+    "react-native": "0.69.2",
     "typescript": "^4.4.4"
   }
 }
