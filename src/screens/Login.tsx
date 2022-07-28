@@ -26,6 +26,7 @@ const Login = () => {
       <PaswordInputUnit
         inputValue="hg"
         showPassword={showPassword}
+        showForgetPasswordLink
         toggleShowPassord={() => setShowPassword(!showPassword)}
       />
     </ScreenLayout>

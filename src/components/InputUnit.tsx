@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import {Lock, Eye, EyeOff} from 'react-native-feather';
 import type {InputFieldType} from '../componentTypes';
 
@@ -34,12 +40,14 @@ export const InputUnit = ({
 
 interface Ipassword {
   inputValue?: string;
+  showForgetPasswordLink?: boolean;
   showPassword?: boolean;
   toggleShowPassord?: () => void;
 }
 export const PaswordInputUnit = ({
   inputValue,
   showPassword,
+  showForgetPasswordLink,
   toggleShowPassord,
 }: Ipassword) => {
   return (
@@ -60,18 +68,30 @@ export const PaswordInputUnit = ({
           {showPassword ? <Eye /> : <EyeOff />}
         </TouchableOpacity>
       </View>
+      {showForgetPasswordLink ? (
+        <TouchableOpacity
+          style={styles.forgetPasswordTouch}
+          onPress={() => console.log('forget password')}>
+          <Text style={styles.forgetPassword}>forget password?</Text>
+        </TouchableOpacity>
+      ) : null}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  inputUnit: {},
-  inputLabel: {},
+  inputUnit: {
+    marginBottom: 20,
+  },
+  inputLabel: {
+    fontSize: 16,
+    fontWeight: '500',
+    marginBottom: 8,
+  },
   inputArea: {
     flexDirection: 'row',
     alignItems: 'center',
     height: 48,
-    marginTop: 16,
     borderWidth: 1.5,
     paddingHorizontal: 8,
     borderColor: themeColor,
@@ -81,5 +101,12 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 40,
     paddingHorizontal: 8,
+  },
+  forgetPasswordTouch: {
+    marginTop: 8,
+  },
+  forgetPassword: {
+    color: themeColor,
+    textAlign: 'right',
   },
 });
