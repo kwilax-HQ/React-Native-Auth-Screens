@@ -20,10 +20,7 @@ export default ({isAuthenticated, children, config}: IAuthScreen) => {
       {!isAuthenticated ? (
         <>
           {OnboardingScreen ? (
-            <Stack.Screen
-              name="OnboardingScreen"
-              component={OnboardingScreen}
-            />
+            <Stack.Screen name="Onboarding" component={OnboardingScreen} />
           ) : null}
           <Stack.Screen name="Login" component={LoginScreen} />
         </>
