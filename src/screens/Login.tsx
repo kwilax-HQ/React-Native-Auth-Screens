@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {Mail} from 'react-native-feather';
 import ScreenLayout from '../components/ScreenLayout';
 import {InputUnit, PaswordInputUnit} from '../components/InputUnit';
+import {Button} from '../components/Button';
+import {ScreenNavText} from '../components/ScreenNavText';
 import type {InputFieldType} from '../componentTypes';
 
 const loginDefaultFieds: InputFieldType[] = [
@@ -29,6 +31,8 @@ const Login = () => {
         showForgetPasswordLink
         toggleShowPassord={() => setShowPassword(!showPassword)}
       />
+      <Button text="Login" handler={() => console.log('login')} />
+      <ScreenNavText text="Don't have An Account? Sign Up" />
     </ScreenLayout>
   );
 };
