@@ -1,6 +1,15 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import type {NavigationContainerProps} from '@react-navigation/native';
 
+export const Txt = () => {
+  return (
+    <View style={styles.body}>
+      <Text style={styles.text}>Auth Component</Text>
+    </View>
+  );
+};
 export default () => {
   return (
     <View style={styles.body}>
