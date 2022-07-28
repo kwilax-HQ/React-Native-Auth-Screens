@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
-import {ArrowUpCircle, User} from 'react-native-feather';
+import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import {Lock, Eye, EyeOff} from 'react-native-feather';
 import type {InputFieldType} from '../componentTypes';
 
 const themeColor = '#4267B2';
 
-const InputUnit = ({
+export const InputUnit = ({
   inputValue,
   keyboardType,
   label,
@@ -32,7 +32,37 @@ const InputUnit = ({
   );
 };
 
-export default InputUnit;
+interface Ipassword {
+  inputValue?: string;
+  showPassword?: boolean;
+  toggleShowPassord?: () => void;
+}
+export const PaswordInputUnit = ({
+  inputValue,
+  showPassword,
+  toggleShowPassord,
+}: Ipassword) => {
+  return (
+    <View style={styles.inputUnit}>
+      <Text style={styles.inputLabel}>Password</Text>
+      <View style={styles.inputArea}>
+        <Lock />
+        <TextInput
+          value={inputValue}
+          style={styles.textInput}
+          placeholder={'password'}
+          placeholderTextColor="#666666"
+          autoCapitalize="none"
+          onChangeText={val => console.log(val)}
+          onEndEditing={e => console.log(e.nativeEvent.text)}
+        />
+        <TouchableOpacity onPress={toggleShowPassord}>
+          {showPassword ? <Eye /> : <EyeOff />}
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   inputUnit: {},
