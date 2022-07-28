@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     paddingHorizontal: 16,
-    paddingVertical: 24,
+    paddingVertical: 36,
     minHeight: 360,
   },
 });
