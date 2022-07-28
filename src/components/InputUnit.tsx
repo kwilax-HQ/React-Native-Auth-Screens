@@ -13,14 +13,14 @@ const themeColor = '#4267B2';
 
 export const InputUnit = ({
   inputValue,
-  keyboardType,
+  keyboardType = "default",
   label,
   leftIcon,
   placeholder,
 }: InputFieldType) => {
   return (
     <View style={styles.inputUnit}>
-      <Text style={styles.inputLabel}>{label}</Text>
+      <Text style={styles.inputLabel}>{label || inputValue}</Text>
       <View style={styles.inputArea}>
         {leftIcon}
         <TextInput
@@ -38,7 +38,7 @@ export const InputUnit = ({
   );
 };
 
-interface Ipassword {
+interface IPassword {
   inputValue?: string;
   showForgetPasswordLink?: boolean;
   showPassword?: boolean;
@@ -49,7 +49,7 @@ export const PaswordInputUnit = ({
   showPassword,
   showForgetPasswordLink,
   toggleShowPassord,
-}: Ipassword) => {
+}: IPassword) => {
   return (
     <View style={styles.inputUnit}>
       <Text style={styles.inputLabel}>Password</Text>
@@ -108,5 +108,7 @@ const styles = StyleSheet.create({
   forgetPassword: {
     color: themeColor,
     textAlign: 'right',
+    fontStyle: 'italic',
+    textDecorationLine: 'underline',
   },
 });
