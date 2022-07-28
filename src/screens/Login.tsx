@@ -1,25 +1,13 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text} from 'react-native';
+import ScreenLayout from '../components/ScreenLayout';
 
-export default () => {
+const Login = () => {
   return (
-    <View style={styles.body}>
-      <Text style={styles.text}>Login Screen</Text>
-    </View>
+    <ScreenLayout screenHeader="Login">
+      <Text>Username</Text>
+    </ScreenLayout>
   );
 };
 
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: '700',
-    textAlign: 'center',
-    width: '80%',
-  },
-});
+export default Login;
