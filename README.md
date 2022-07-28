@@ -35,21 +35,36 @@ import config from './config'
 
 const App = () => (
   const authState = true // App Derived Auth State
-  <NavigationContainer>
-    <RNAuthScreens isAuthenticated={authState} config={config}>
-      <AppStack />
-    </RNAuthScreens>
-  </NavigationContainer>
+  return(
+    <NavigationContainer>
+        <RNAuthScreens isAuthenticated={authState} config={config}>
+        <AppStack />
+        </RNAuthScreens>
+    </NavigationContainer>
+  )
 );
 
 export default App
 
 ```
 
-### Screen
+### Screens
 React Native Auth Screen is a React Navigation Native Stack. You may navigate around the Screens via there names.
 - Onboarding
 - Login
 
 ### Config
 Detailed list of the Config object entries
+- OnboardingScreen: The default screen is the Login Screen. However you can provide a custom Onboarding Screen that would then display as default. From you Onboarding Screen, you can navigate to the Login and Other Screens using the screen names provides in the Screens Section above  
+
+    ```jsx
+    import MyOnboardingScreen from './myOnboardingScreen'
+    
+    const App = () => (
+        // rest of the app
+        <RNAuthScreens isAuthenticated={falsle} config={{OnboardingScreen: MyOnboardingScreen}}>
+            <AppStack />
+        </RNAuthScreens>
+    );
+    ```
+- next
