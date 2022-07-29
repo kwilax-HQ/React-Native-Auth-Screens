@@ -1,4 +1,7 @@
 
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 # [@kwilax/react-native-auth-screens](https://github.com/kwilax-core/React-Native-Auth-Screens)
 
 A Zero Dependency Authentication Screen UI for React Native & Expo Built on [@react-navigation](https://www.npmjs.com/package/@react-navigation/native)
@@ -68,3 +71,16 @@ Detailed list of the Config object entries
     );
     ```
 - next
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

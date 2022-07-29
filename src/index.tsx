@@ -2,7 +2,9 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //Screens
-import LoginScreen from './screens/Login';
+import Login from './screens/Login';
+import Signup from './screens/Signup';
+
 interface IAuthScreen {
   isAuthenticated?: boolean;
   children?: React.ReactNode;
@@ -22,7 +24,8 @@ export default ({isAuthenticated, children, config}: IAuthScreen) => {
           {OnboardingScreen ? (
             <Stack.Screen name="Onboarding" component={OnboardingScreen} />
           ) : null}
-          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="Login" component={Signup} />
+          <Stack.Screen name="Signup" component={Login} />
         </>
       ) : (
         children
